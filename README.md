@@ -17,3 +17,9 @@ emitter.publish({
 ```
 
 ...is really all it takes for a Javascript app to start a connection with Emitter and send a message.
+
+## The choice of the MQTT library
+
+Most SDKs developped by our team are based on MQTT libs distributed by the [Eclipse Paho project](http://www.eclipse.org/paho/). This project provide an implementation for most mainstream language, like C#, Java, Python, C, C++, ... But you'll easily find MQTT libs for almost any languages, and you are free to choose any implementation of MQTT in accordance with you requirements. For example, although the Paho project provide a embedded C implementation, you might
+
+
