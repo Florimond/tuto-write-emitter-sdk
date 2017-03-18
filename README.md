@@ -51,14 +51,18 @@ The options are specific to an operation.
 #### Publication
 
 - ttl
+
 Add "?ttl=X" to specify how long the message should be stored in the channel.
 
 #### Subscription
 
 - last
+
 Add "?last=X" to specify how many stored messages should be retrieved upon subscription.
 
 ### An implementation of the formatting
+
+Here is a Javascript implementation of the channel formatting function, coming from the [official Javascript SDK](https://github.com/emitter-io/javascript)
 
 ```
 Emitter.prototype._formatChannel = function (key, channel, options) {
@@ -83,3 +87,20 @@ Emitter.prototype._formatChannel = function (key, channel, options) {
 };
 ```
 
+### Channel formatting for specific services
+
+#### Presence
+The Presence service allows you to query for the list of clients that are subscribed to some channel.
+
+To request a presence status, the channel passed to the MQTT lib should starts with "emitter/presence/", and the rest of the string should be a JSON indicating the channel key and the channel name.
+
+```
+emitter/presence/{"key":"LyOL3fhQDfOKyB6PWNkv6vemLSPjP8hf","channel":"article1"}
+```
+
+#### Keygen
+If you have a key with sufficient rights, you can request a new key for some channel. The channel passed to the MQTT lib should now starts with "emitter/keygen/".
+
+```
+emitter/keygen/{"key":"LyOL3fhQDfOKyB6PWNkv6vemLSPjP8hf","channel":"article1"}
+```
