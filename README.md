@@ -45,13 +45,13 @@ If the MQTT implementation you are using supports SSL, you can request an encryp
 8443
 ```
 
-While some MQTT implementations are happy with such an URL for the broker :
+While some MQTT implementations are happy with such an URL for the broker...
 
 ```
 api.emitter.io:8443
 ```
 
-Some other implementations may have some specificities. For example, the MQTT lib we use for the official Javascript SDK requires the broker's URL to be prefixed with "ws://" or "wss://" depending on whether you request an unsecure or a secure connection.
+...some other implementations may have some specificities. For example, the MQTT lib we use for the official Javascript SDK requires the broker's URL to be prefixed with **ws://** or **wss://** depending on whether you request an unsecure or a secure connection.
 
 ## The channel
 
@@ -80,13 +80,13 @@ The options are specific to an operation.
 
 - ttl
 
-Add "?ttl=X" to specify how long the message should be stored in the channel.
+Add **?ttl=X** to specify how long the message should be stored in the channel.
 
 #### Subscription
 
 - last
 
-Add "?last=X" to specify how many stored messages should be retrieved upon subscription.
+Add **?last=X** to specify how many stored messages should be retrieved upon subscription.
 
 ### An implementation for the formatting of channels
 
