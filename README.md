@@ -46,7 +46,17 @@ KEY/CHANNEL[/ANY NUMBER OF SUB-CHANNELS][/?OPTIONS]
 
 ### The options
 
+The options are specific to an operation.
 
+#### Publication
+
+- ttl
+Add "?ttl=X" to specify how long the message should be stored in the channel.
+
+#### Subscription
+
+- last
+Add "?last=X" to specify how many stored messages should be retrieved upon subscription.
 
 ### An implementation of the formatting
 
