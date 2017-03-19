@@ -20,7 +20,7 @@ emitter.publish({
 
 ## The choice of the MQTT library
 
-Most SDKs developped by our team are based on MQTT libs distributed by the [Eclipse Paho project](http://www.eclipse.org/paho/). This project provide an implementation for most mainstream language, like C#, Java, Python, C, C++, ... But you'll easily find MQTT libs for almost any languages, and you are free to choose any implementations of MQTT in accordance with you requirements. For example, although the Paho project provide an embedded C implementation, you might be happy with something as light as [knolleary's pubsubclient implementation](https://github.com/krohling/ArduinoPusherClient). I successfully communicated with Emitter from my recently acquired Arduino Yun, using this implementation.
+Most SDKs developped by our team are based on MQTT libs distributed by the [Eclipse Paho project](http://www.eclipse.org/paho/). This project provide an implementation for most mainstream languages, like C#, Java, Python, C, C++, ... But you'll easily find MQTT libs for almost any languages, and you are free to choose any implementations of MQTT in accordance with you requirements. For example, although the Paho project provides an embedded C implementation, you might be happy with something as light as [knolleary's pubsubclient implementation](https://github.com/krohling/ArduinoPusherClient). I successfully communicated with Emitter from my recently acquired Arduino Yun, using this implementation.
 
 
 Just be sure to check whether all the features you need (for example, the SSL support) are implemented in the flavour you covet.
@@ -74,13 +74,13 @@ KEY/CHANNEL[/ANY NUMBER OF SUB-CHANNELS][/?OPTIONS]
 
 ### The options
 
-The options are specific to an operation.
+The options are specific to some operations.
 
 #### Publication
 
 - ttl
 
-Add **?ttl=X** to specify how long the message should be stored in the channel.
+Add **?ttl=X** to specify how long the message should be stored in the channel after publication.
 
 #### Subscription
 
