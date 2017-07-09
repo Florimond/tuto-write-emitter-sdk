@@ -129,6 +129,12 @@ emitter/presence/{"key":"LyOL3fhQDfOKyB6PWNkv6vemLSPjP8hf","channel":"article1"}
 #### Keygen
 If you have a key with sufficient rights, you can request a new key for some channel. The channel passed to the MQTT lib should now starts with "emitter/keygen/".
 
+Topic:
 ```
-emitter/keygen/{"key":"LyOL3fhQDfOKyB6PWNkv6vemLSPjP8hf","channel":"article1"}
+emitter/keygen/
+```
+
+Payload:
+```
+{"key":"LyOL3fhQDfOKyB6PWNkv6vemLSPjP8hf","channel":"article1"}
 ```
